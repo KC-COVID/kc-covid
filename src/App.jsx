@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import ReactDOM from 'react-dom';
+// This is being dumb import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -23,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));

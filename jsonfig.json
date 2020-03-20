@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      // Put paths here for relative path config in vscode
+      "common/*": ["./src/common/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "public"
+  ]
+}
