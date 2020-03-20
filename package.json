@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Misterimpulse/kc-covid.git"
+    "url": "git+https://github.com/Kansas-City-Mutual-Aid/kc-covid.git"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js -p",
