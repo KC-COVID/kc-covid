@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// This is being dumb import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
