@@ -10,8 +10,10 @@
 
 # production
 /build
+/dist
 /public
 /lib
+/target
 
 # misc
 .DS_Store

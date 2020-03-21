@@ -5,8 +5,8 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      // Put paths here for relative path config in vscode
-      "common/*": ["./src/common/*"]
+      "common/*": ["./src/common/*"],
+      "components/*": ["./src/components"]
     }
   },
   "exclude": [

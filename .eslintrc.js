@@ -5,13 +5,14 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": 2017,
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
     }
   },
   "plugins": [
     "react",
     "jsx-a11y",
-    "import"
+    "import",
+    "jest"
   ],
   "env": {
     "browser": true,
@@ -42,7 +43,7 @@ module.exports = {
         "jest/prefer-to-contain": "error",
         "jest/prefer-to-have-length": "error",
         "jest/no-test-callback": "error",
-        "jest/require-tothrow-message": "error",
+        "jest/require-to-throw-message": "error",
         "jest/valid-describe": "error",
         "jest/valid-expect-in-promise": "error",
         "jest/valid-expect": "error",
@@ -66,8 +67,7 @@ module.exports = {
   ],
   "rules": {
     "import/prefer-default-export": "off",
-    "jsx-a11y/href-no-hash": "on",
-    "jsx-a11y/img-has-alt": "on",
+    "react/jsx-fragments": "off",
     "jsx-a11y/anchor-is-valid": ["error", {
       "components": ["Link"],
       "specialLink": ["to", "hrefLeft", "hrefRight"],

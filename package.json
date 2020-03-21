@@ -7,20 +7,18 @@
     "url": "git+https://github.com/Kansas-City-Mutual-Aid/kc-covid.git"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.config.js -p",
+    "build": "cp src/index.html dist/index.html && npm run pack",
     "clean": "rimraf package-lock.json && rimraf ./node_modules",
     "clean:install": "npm run clean && npm install",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "if [ -d './src' ]; then rimraf ./lib; fi",
     "compile:build": "babel src --out-dir lib --copy-files",
-    "start": "webpack-dev-server --hot --mode development",
+    "pack": "NODE_ENV=production webpack --config webpack.config.js -p",
+    "start": "webpack-dev-server --mode development",
     "test": "react-scripts test",
     "lint:scss": "stylelint src/**/*.scss",
-    "test:lint": "eslint --ext .js,.jsx, . && npm run lint:scss",
+    "test:lint": "eslint --fix --ext .js,.jsx, . && npm run lint:scss",
     "test:jest": "jest --config jestconfig.json"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -35,10 +33,11 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.0",
-    "rimraf": "^3.0.2"
+    "react-scripts": "^3.4.0",
+    "react-social-icons": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",
@@ -60,13 +59,14 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-react-intl": "^2.0.6",
     "enzyme-to-json": "^3.4.4",
-    "eslint": "^6.1.0",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
+    "file-loader": "^6.0.0",
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "25.1.0",
@@ -74,16 +74,18 @@
     "jest-snapshot": "^25.1.0",
     "mocha": "^7.1.1",
     "node-sass": "^4.13.1",
+    "react-hot-loader": "4.12.20",
     "react-svg-loader": "^3.0.3",
+    "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
     "stylelint": "^13.2.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-suitcss": "^3.0.0",
-    "style-loader": "^1.1.3",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "main": "jestsetup.js",
+  "main": "/dist/index.html",
   "directories": {
     "lib": "lib",
     "test": "tests"

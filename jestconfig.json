@@ -1,0 +1,24 @@
+{
+  "setupFiles": [
+    "raf/polyfill",
+    "./jestsetup.js",
+    "./jestproptypeerror.js"
+  ],
+  "snapshotSerializers": [
+    "./node_modules/enzyme-to-json/serializer"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|scss|svg)$": "identity-obj-proxy",
+    "^common(.*)$": "<rootDir>/src/common/$1",
+    "^order-profile(.*)$": "<rootDir>/src/bundles/order-profile/$1"
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+  "coverageDirectory": "target/reports/coverage",
+  "coverageReporters": ["html", "lcov", "cobertura", "text-summary"],
+  "moduleDirectories": ["aggregated-translations", "node_modules"],
+  "moduleFileExtensions": ["js", "jsx"],
+  "testPathIgnorePatterns": ["public/", "lib/", "dist/"],
+  "testURL": "http://localhost",
+  "resetModules": true
+}

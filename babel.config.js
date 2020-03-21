@@ -1,4 +1,5 @@
 const path = require('path');
+
 module.exports = (api) => {
   api.cache(true);
   api.assertVersion('^7.4.4');
@@ -14,9 +15,7 @@ module.exports = (api) => {
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-transform-react-jsx-source',
     '@babel/plugin-transform-regenerator',
-    ['babel-plugin-webpack-alias', {
-      config: path.resolve(__dirname, './relativePath.config.js')
-    }],
+    ['babel-plugin-webpack-alias', { config: path.resolve(__dirname, './relativePath.config.js') }],
   ];
   return {
     presets,

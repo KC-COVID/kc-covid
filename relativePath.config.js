@@ -8,8 +8,8 @@ const config = {
     alias: {
       common: path.join(path.resolve(__dirname, './src/components/common')),
       'more-than-one-word-path': path.join(path.resolve(__dirname, './src/components/long-path-name')),
-    }
-  }
+    },
+  },
 };
 
 module.exports = config;

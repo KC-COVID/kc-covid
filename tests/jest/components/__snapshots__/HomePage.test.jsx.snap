@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage renders a the home page view 1`] = `
+<Fragment>
+  <HomeHeader />
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src={null}
+    />
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+  </div>
+</Fragment>
+`;

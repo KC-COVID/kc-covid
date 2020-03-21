@@ -1,25 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
-import './App.css';
 
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
+import HomePage from './components/HomePage';
+import RequestAidForm from './components/RequestAidForm';
+import VolunteerForm from './components/VolunteerForm';
+
+import './App.scss';
+
+// TODO INTL
+// TODO ErrorBoundary + wrap all components in one
+// TODO have error boundary log errors to slack?
 function App() {
+  const [currentTab, setTab] = React.useState('home-tab');
+
+  const handleChange = (event, newValue) => {
+    setTab(newValue);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar position="static">
+        <Tabs value={currentTab} onChange={handleChange} centered>
+          <Tab label="Home" id="home-tab" value="home-tab" />
+          <Tab label="Volunteer" id="volunteer-tab" value="volunteer-tab" />
+          <Tab label="Request Aid" id="aid-tab" value="aid-tab" />
+          <Tab label="Submit Data" id="submit-tab" value="submit-tab" />
+        </Tabs>
+      </AppBar>
+      { currentTab === 'home-tab' && <HomePage /> }
+      { currentTab === 'volunteer-tab' && <VolunteerForm /> }
+      { currentTab === 'aid-tab' && <RequestAidForm /> }
+      { currentTab === 'submit-tab' && <p>Put in some data</p> }
     </div>
   );
 }
