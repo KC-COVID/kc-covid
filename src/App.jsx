@@ -21,9 +21,10 @@ function App() {
     setTab(newValue);
   };
 
+  // TODO SOON make app bar width responsive
   return (
     <div className="App">
-      <AppBar position="static">
+      <AppBar position="responsive">
         <Tabs value={currentTab} onChange={handleChange} centered>
           <Tab label="Home" id="home-tab" value="home-tab" />
           <Tab label="Volunteer" id="volunteer-tab" value="volunteer-tab" />
