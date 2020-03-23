@@ -2,14 +2,14 @@ import React, { Fragment } from 'react';
 import { SocialIcon } from 'react-social-icons';
 
 import './HomePage.scss';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import logo from '../assets/KCCovid_stacked_color.png';
 
 const HomeHeader = () => (
   <Row>
     <Col>
-      <img src={logo} style={{maxWidth: "100%"}}></img>
-      <h1>Some text to put in the header</h1>
+      <img src={logo} style={{ maxWidth: "100%" }} class="header-logo"></img>
+      <h1>Kansas City's Covid Assistance</h1>
     </Col>
   </Row>
 );
@@ -17,10 +17,10 @@ const HomeHeader = () => (
 const SocialMediaSection = () => (
   <Row>
     <Col>
-      <h3>Follow us on social media for quick updates </h3>
+      <h3>Follow us on social media for quick updates</h3>
       <div className="social-links">
-        <SocialIcon className="social-icon" url="https://twitter.com/QuintonLucasKC" />
-        <SocialIcon className="social-icon" url="https://twitter.com/QuintonLucasKC" />
+        <SocialIcon className="social-icon" url="https://twitter.com/kccovid" />
+        <SocialIcon className="social-icon" url="https://www.facebook.com/groups/1596299170524391/" />
       </div>
     </Col>
   </Row>
@@ -28,19 +28,29 @@ const SocialMediaSection = () => (
 
 // TODO make home page
 // TODO add social accounts
-function HomePage() {
+function HomePage(props) {
+  console.log(props);
+  // const [currentTab, setTab] = React.useState('home-tab');
   // SocialIcon automatically pulls the icon from the url or you can specify it
   return (
     <Fragment>
       <HomeHeader />
-      <Container style={{ backgroundColor: "#000000" }}>
-        <Row>
-          <Col>
-            <h2>Title for explaining what we do</h2>
-            <p>Here is a long paragraph that we will one day need to translate because it\'s only in english and thats a bad because other people don\'t always speak english and we also want to help them.</p>
-          </Col>
-        </Row>
-      </Container>
+      <Row>
+        <Col>
+          <h2>What are you here for?</h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={4} xs={12} style={{marginBottom: "4px"}}>
+          <Button variant="primary" block onClick={() => props.setTab('volunteer-tab')}>Volunteer</Button>
+        </Col>
+        <Col md={4} xs={12} style={{marginBottom: "4px"}}>
+          <Button variant="primary" block onClick={() => props.setTab('aid-tab')}>Request Aid</Button>
+        </Col>
+        <Col md={4} xs={12} style={{marginBottom: "4px"}}>
+          <Button variant="primary" block onClick={() => props.setTab('submit-tab')}>Offer Supplies</Button>
+        </Col>
+      </Row>
       <SocialMediaSection />
     </Fragment>
   );

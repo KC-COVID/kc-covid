@@ -49,9 +49,9 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <div style={{ height: '56px' }}></div>
+      <div style={{ height: '60px' }}></div>
       <Container>
-      {currentTab === 'home-tab' && <HomePage />}
+      {currentTab === 'home-tab' && <HomePage setTab={setTab} />}
         {currentTab === 'volunteer-tab' && <VolunteerForm />}
         {currentTab === 'aid-tab' && <RequestAidForm />}
         {currentTab === 'submit-tab' && <p>Put in some data</p>}
