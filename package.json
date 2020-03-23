@@ -8,12 +8,14 @@
   },
   "scripts": {
     "build": "cp src/index.html dist/index.html && npm run pack",
+    "build-win": "powershell -Command \"Copy-Item 'src/index.html' 'dist/index.html'\" && npm run pack-win",
     "clean": "rimraf package-lock.json && rimraf ./node_modules",
     "clean:install": "npm run clean && npm install",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "if [ -d './src' ]; then rimraf ./lib; fi",
     "compile:build": "babel src --out-dir lib --copy-files",
     "pack": "NODE_ENV=production webpack --config webpack.config.js -p",
+    "pack-win": "webpack --config webpack.config.js -p",
     "start": "webpack-dev-server --mode development",
     "test": "react-scripts test",
     "lint:scss": "stylelint src/**/*.scss",
@@ -34,7 +36,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
+    "bootstrap": "^4.4.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.0",
     "react-social-icons": "^4.1.0"
@@ -54,6 +58,7 @@
     "@babel/runtime": "^7.7.4",
     "babel-loader": "^8.0.6",
     "babel-plugin-webpack-alias": "^2.1.2",
+    "bootstrap-react": "0.3.1",
     "css-loader": "^3.4.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
