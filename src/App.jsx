@@ -35,23 +35,23 @@ function App() {
           <Tab label="Submit Data" id="submit-tab" value="submit-tab" />
         </Tabs>
       </AppBar> */}
-      <Navbar bg="light" fixed="top">
+      <Navbar bg="light" fixed="top" expand="lg">
         <Navbar.Brand href="#home" onClick={() => setTab('home-tab')}>
-          <img src={logo} style={{ height: '20px' }} alt="logo" />
+          <img src={logo} style={{ height: '20px', marginTop: '-8px' }} alt="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav class="mr-auto">
-            <Nav.Link onClick={() => setTab('home-tab')}>Home</Nav.Link>
-            <Nav.Link onClick={() => setTab('volunteer-tab')}>Volunteer</Nav.Link>
-            <Nav.Link onClick={() => setTab('aid-tab')}>Request Aid</Nav.Link>
-            <Nav.Link onClick={() => setTab('submit-tab')}>Submit Data</Nav.Link>
+            <Nav.Link onClick={() => setTab('home-tab')} className={currentTab === 'home-tab' ? 'active' : ''}>Home</Nav.Link>
+            <Nav.Link onClick={() => setTab('volunteer-tab')} className={currentTab === 'volunteer-tab' ? 'active' : ''}>Volunteer</Nav.Link>
+            <Nav.Link onClick={() => setTab('aid-tab')} className={currentTab === 'aid-tab' ? 'active' : ''}>Request Aid</Nav.Link>
+            <Nav.Link onClick={() => setTab('submit-tab')} className={currentTab === 'submit-tab' ? 'active' : ''}>Submit Data</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <div style={{ height: '56px' }}></div>
       <Container>
-        {currentTab === 'home-tab' && <HomePage />}
+      {currentTab === 'home-tab' && <HomePage />}
         {currentTab === 'volunteer-tab' && <VolunteerForm />}
         {currentTab === 'aid-tab' && <RequestAidForm />}
         {currentTab === 'submit-tab' && <p>Put in some data</p>}
