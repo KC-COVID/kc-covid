@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kansas-City-Mutual-Aid/kc-covid.git"
+    "url": "git+https://github.com/KC-COVID/kc-covid.git"
   },
   "scripts": {
     "build": "cp src/index.html dist/index.html && npm run pack",

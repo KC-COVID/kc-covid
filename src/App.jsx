@@ -27,7 +27,7 @@ function App() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav class="mr-auto">
+          <Nav className="mr-auto">
             <Nav.Link onClick={() => setTab('home-tab')} className={currentTab === 'home-tab' ? 'active' : ''}>Home</Nav.Link>
             <Nav.Link onClick={() => setTab('volunteer-tab')} className={currentTab === 'volunteer-tab' ? 'active' : ''}>Volunteer</Nav.Link>
             <Nav.Link onClick={() => setTab('aid-tab')} className={currentTab === 'aid-tab' ? 'active' : ''}>Request Aid</Nav.Link>

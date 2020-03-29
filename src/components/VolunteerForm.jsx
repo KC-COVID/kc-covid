@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { Button } from 'react-bootstrap';
 
 function VolunteerForm() {
   const { register, handleSubmit, errors, watch } = useForm();
-  // Errors look like: {irstName: {type: "maxLength", message: "", ref: {} }}
+  // Errors look like: {irstName: {type: "maxLength", message: " ref: {} }}
+  const [showAfterSubmit, setShowAfterSubmit] = useState(false);
 
+  // TODO what to do on submitting error?
   const onSubmit = (data) => {
     // TODO trim data
     console.log('Data', JSON.stringify(data));
+    setShowAfterSubmit(true);
   };
 
   const showExtraFields = watch('showExtra');
 
+  if (showAfterSubmit) {
+    return (
+      <div>
+        <p>
+          Thank you! Your information is on its way to a volunteer coordinator,
+          and someone will contact you with more information about how you can help.
+          Please stay safe and we'll be in touch soon!
+        </p>
+        <Button variant="primary" block onClick={() => setShowAfterSubmit(false)}>Submit Again</Button>
+      </div>
+    );
+  }
   // TODO state options
   // TODO services fields
   // TODO number range for age

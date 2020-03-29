@@ -1,27 +1,16 @@
 import React, { Fragment } from 'react';
-import { SocialIcon } from 'react-social-icons';
+
+import { Row, Col, Button } from 'react-bootstrap';
+import SocialMediaSection from './SocialMediaSection';
 
 import './HomePage.scss';
-import { Row, Col, Button } from 'react-bootstrap';
 import logo from '../assets/KCCovid_stacked_color.png';
 
 const HomeHeader = () => (
   <Row>
     <Col>
-      <img src={logo} style={{ maxWidth: "100%" }} class="header-logo"></img>
+      <img src={logo} style={{ maxWidth: '100%' }} className="header-logo" />
       <h1>Kansas City's Covid Assistance</h1>
-    </Col>
-  </Row>
-);
-
-const SocialMediaSection = () => (
-  <Row>
-    <Col>
-      <h3>Follow us on social media for quick updates</h3>
-      <div className="social-links">
-        <SocialIcon className="social-icon" url="https://twitter.com/kccovid" />
-        <SocialIcon className="social-icon" url="https://www.facebook.com/groups/1596299170524391/" />
-      </div>
     </Col>
   </Row>
 );
@@ -41,13 +30,13 @@ function HomePage(props) {
         </Col>
       </Row>
       <Row>
-        <Col md={4} xs={12} style={{marginBottom: "4px"}}>
+        <Col md={4} xs={12} style={{ marginBottom: '4px' }}>
           <Button variant="primary" block onClick={() => props.setTab('volunteer-tab')}>Volunteer</Button>
         </Col>
-        <Col md={4} xs={12} style={{marginBottom: "4px"}}>
+        <Col md={4} xs={12} style={{ marginBottom: '4px' }}>
           <Button variant="primary" block onClick={() => props.setTab('aid-tab')}>Request Aid</Button>
         </Col>
-        <Col md={4} xs={12} style={{marginBottom: "4px"}}>
+        <Col md={4} xs={12} style={{ marginBottom: '4px' }}>
           <Button variant="primary" block onClick={() => props.setTab('submit-tab')}>Offer Supplies</Button>
         </Col>
       </Row>
