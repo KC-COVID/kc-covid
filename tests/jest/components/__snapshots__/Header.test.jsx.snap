@@ -1,0 +1,892 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header displays the aid tab as active when the path is /aid 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header displays the home tab as active when the path is / 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header displays the submit tab as active when the path is /submit 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header displays the volunteer tab as active when the path is /volunteer 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header navigates to the aid route when the aid tab is clicked 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header navigates to the home route when the home tab is clicked 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header navigates to the submit route when the submit tab is clicked 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header navigates to the volunteer route when the volunteer tab is clicked 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
+
+exports[`Header renders the nav bar with a brand, toggle, and collapse 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  fixed="top"
+  variant="light"
+>
+  <NavbarBrand
+    onClick={[Function]}
+  >
+    <img
+      alt="logo"
+      src={null}
+      style={
+        Object {
+          "height": "20px",
+          "marginTop": "-8px",
+        }
+      }
+    />
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className="active"
+        disabled={false}
+        id="home-tab"
+        onClick={[Function]}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="volunteer-tab"
+        onClick={[Function]}
+      >
+        Volunteer
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="aid-tab"
+        onClick={[Function]}
+      >
+        Request Aid
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        className=""
+        disabled={false}
+        id="submit-tab"
+        onClick={[Function]}
+      >
+        Submit Data
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
