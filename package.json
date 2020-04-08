@@ -7,15 +7,17 @@
     "url": "git+https://github.com/Kansas-City-Mutual-Aid/kc-covid.git"
   },
   "scripts": {
-    "build": "cp src/index.html dist/index.html && npm run pack",
+    "build": "npm run clean:build && cp src/index.html dist/index.html && npm run pack",
     "build-win": "powershell -Command \"Copy-Item 'src/index.html' 'dist/index.html'\" && npm run pack-win",
     "clean": "rimraf package-lock.json && rimraf ./node_modules",
+    "clean:build": "if [ -d './dist' ]; then rimraf ./dist; fi && mkdir dist",
     "clean:install": "npm run clean && npm install",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "if [ -d './src' ]; then rimraf ./lib; fi",
     "compile:build": "babel src --out-dir lib --copy-files",
     "pack": "NODE_ENV=production webpack --config webpack.config.js -p",
     "pack-win": "webpack --config webpack.config.js -p",
+    "postinstall": "npm run build",
     "start": "webpack-dev-server --mode development",
     "test": "npm run test:lint && npm run test:jest",
     "lint:scss": "stylelint src/**/*.scss",
