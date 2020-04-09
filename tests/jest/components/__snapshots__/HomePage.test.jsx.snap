@@ -1,24 +1,333 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HomePage navigates to the aid page when the request aid button is clicked 1`] = `
+<Fragment>
+  <HomeHeader />
+  <Row
+    noGutters={false}
+  >
+    <Col>
+      <h2>
+        What are you here for?
+      </h2>
+    </Col>
+  </Row>
+  <Row
+    noGutters={false}
+  >
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="volunteer-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Volunteer
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4p",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="aid-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Request Aid
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="supplies-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Offer Supplies
+      </Button>
+    </Col>
+  </Row>
+  <SocialMediaSection />
+</Fragment>
+`;
+
+exports[`HomePage navigates to the submit resources page when the request offer supplies button is clicked 1`] = `
+<Fragment>
+  <HomeHeader />
+  <Row
+    noGutters={false}
+  >
+    <Col>
+      <h2>
+        What are you here for?
+      </h2>
+    </Col>
+  </Row>
+  <Row
+    noGutters={false}
+  >
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="volunteer-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Volunteer
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4p",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="aid-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Request Aid
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="supplies-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Offer Supplies
+      </Button>
+    </Col>
+  </Row>
+  <SocialMediaSection />
+</Fragment>
+`;
+
+exports[`HomePage navigates to the volunteer page when the volunteer button is clicked 1`] = `
+<Fragment>
+  <HomeHeader />
+  <Row
+    noGutters={false}
+  >
+    <Col>
+      <h2>
+        What are you here for?
+      </h2>
+    </Col>
+  </Row>
+  <Row
+    noGutters={false}
+  >
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="volunteer-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Volunteer
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4p",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="aid-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Request Aid
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="supplies-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Offer Supplies
+      </Button>
+    </Col>
+  </Row>
+  <SocialMediaSection />
+</Fragment>
+`;
+
 exports[`HomePage renders a the home page view 1`] = `
 <Fragment>
   <HomeHeader />
-  <div
-    className="App-header"
+  <Row
+    noGutters={false}
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src={null}
-    />
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
+    <Col>
+      <h2>
+        What are you here for?
+      </h2>
+    </Col>
+  </Row>
+  <Row
+    noGutters={false}
+  >
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
     >
-      Learn React
-    </a>
-  </div>
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="volunteer-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Volunteer
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4p",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="aid-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Request Aid
+      </Button>
+    </Col>
+    <Col
+      md={4}
+      style={
+        Object {
+          "marginBottom": "4px",
+        }
+      }
+      xs={12}
+    >
+      <Button
+        active={false}
+        block={true}
+        disabled={false}
+        id="supplies-button"
+        onClick={[Function]}
+        type="button"
+        variant="primary"
+      >
+        Offer Supplies
+      </Button>
+    </Col>
+  </Row>
+  <SocialMediaSection />
 </Fragment>
 `;

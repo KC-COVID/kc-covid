@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary shows the error view when an error occurs in the children 1`] = `
+<TestComp
+  id="pchild"
+/>
+`;
+
+exports[`ErrorBoundary shows the error view when an error occurs in the children 2`] = `
+<h1>
+  Something went wrong on our end. Please send an email to webmaster@kccovid.com with a brief description of what you were trying to do.
+</h1>
+`;

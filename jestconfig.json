@@ -8,7 +8,7 @@
     "./node_modules/enzyme-to-json/serializer"
   ],
   "moduleNameMapper": {
-    "\\.(css|scss|svg)$": "identity-obj-proxy",
+    "\\.(css|png|scss|svg)$": "identity-obj-proxy",
     "^common(.*)$": "<rootDir>/src/common/$1",
     "^order-profile(.*)$": "<rootDir>/src/bundles/order-profile/$1"
   },
