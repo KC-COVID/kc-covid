@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
     // Update state so the next render will show the fallback UI.
 
     /* eslint-disable no-console */
-    console.log(`ERROR OCCURRED: ${error}`);
+    console.error(`ERROR OCCURRED: ${error}`);
     return { hasError: true };
   }
 
