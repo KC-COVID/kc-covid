@@ -8,6 +8,7 @@ import Header from './components/Header';
 import HomePage from './components/HomePage';
 import RequestAidForm from './components/RequestAidForm';
 import VolunteerForm from './components/VolunteerForm';
+import Resources from './components/resources/Resources';
 
 import './App.scss';
 
@@ -19,8 +20,11 @@ function App() {
         <div className="App">
           <Header />
           <div style={{ height: '60px' }} />
-          <Container>
+          <Container fluid>
             <Switch>
+              <Route path="/resources">
+                <Resources/>
+              </Route>
               <Route path="/aid">
                 <RequestAidForm />
               </Route>

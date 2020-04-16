@@ -43,6 +43,13 @@ function Header() {
           >
             Submit Data
           </Nav.Link>
+          <Nav.Link
+            onClick={() => history.push('/resources')}
+            id="submit-tab"
+            className={path === '/submit' ? 'active' : ''}
+          >
+            Resources
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
