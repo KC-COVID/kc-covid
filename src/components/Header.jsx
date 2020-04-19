@@ -44,7 +44,7 @@ function Header() {
             Submit Data
           </Nav.Link>
           <Nav.Link
-            onClick={() => history.push('/resources')}
+            onClick={() => history.push("/resources")}
             id="submit-tab"
             className={path === '/submit' ? 'active' : ''}
           >

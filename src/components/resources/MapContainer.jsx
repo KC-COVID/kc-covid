@@ -1,10 +1,10 @@
 import React from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 import { GoogleMapsAPIKey } from '../../../private/google_maps';
 import { withRouter } from 'react-router-dom';
 
-const MyMapComponent = (withScriptjs(withGoogleMap(({ center }) => {
-    const zoom = 12;
+const MapComponent = (withScriptjs(withGoogleMap(({ center }) => {
+    const zoom = 13;
 
     return (
         <GoogleMap
@@ -16,7 +16,7 @@ const MyMapComponent = (withScriptjs(withGoogleMap(({ center }) => {
 
 const MapContainer = ({ center }) => {
     return (
-        <MyMapComponent
+        <MapComponent
             googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${GoogleMapsAPIKey}`}
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `100%` }} />}
