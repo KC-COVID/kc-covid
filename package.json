@@ -18,9 +18,10 @@
     "clean:client": "cd ./client && npm run clean",
     "clean:server": "rimraf ./node_modules",
     "clean:install": "npm run clean && npm install",
+    "install:client": "cd ./client && npm install",
     "start": "node ./dist/server.js",
     "start:dev": "cd ./client && npm run start",
-    "postinstall": "cd client npm install && cd .. npm run build "
+    "postinstall": "npm run install:client && npm run build "
   },
   "browserslist": {
     "production": [
@@ -35,6 +36,7 @@
     ]
   },
   "dependencies": {
+    "airtable": "^0.8.1",
     "express": "^4.17.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.0.4"
