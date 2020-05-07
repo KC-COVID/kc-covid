@@ -18,7 +18,7 @@ module.exports = {
       test: /\.md$/,
       use: 'raw-loader',
     }, {
-      test: /\.(html|png|svg|jpg|gif|otf|eot|ttf|svg|woff|woff2)$/,
+      test: /\.(html|png|svg|jpg|gif|otf|eot|ttf|woff|woff2)$/,
       use: 'file-loader',
     }],
   },
