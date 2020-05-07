@@ -1,0 +1,59 @@
+import React, { useEffect, useState } from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { withRouter } from 'react-router-dom';
+import { GoogleMapsAPIKey } from '../../../private/google_maps';
+import { resource_service } from '../../services/resources_service';
+
+// marker absolute paths
+const DonationMarkerIcon = '/images/markers/blue-marker.svg';
+const RequestMarkerIcon = '/images/markers/purple-marker.svg';
+
+const MapComponent = (withScriptjs(withGoogleMap(({ center }) => {
+  const zoom = 12;
+  const [ donations, setDonations ] = useState([]);
+  const [ requests, setRequests ] = useState([]);
+
+  useEffect(() => {
+    resource_service.fetchLocalResourceData().then(data => {
+      if(data.hasOwnProperty('donations') && data.hasOwnProperty('requests')) {
+        setDonations(data.donations);
+        setRequests(data.requests);
+      }
+    });
+  }, []);
+
+  return (
+    <GoogleMap
+      defaultZoom={zoom}
+      center={center}
+      {donations.map(donation => {
+        const position = {lat: donation.lat, lng: donation.lng};
+        return <Marker
+          key={donation.timestamp}
+          icon={DonationMarkerIcon}
+          position={position}>
+        </Marker>
+      })}
+      {requests.map(request => {
+        const position = {lat: request.lat, lng: request.lng};
+        return <Marker
+          key={request.timestamp}
+          icon={RequestMarkerIcon}
+          position={position}>
+        </Marker>
+      })}
+    />
+  );
+})));
+
+const MapContainer = ({ center }) => (
+  <MapComponent
+    googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${GoogleMapsAPIKey}`}
+    loadingElement={<div style={{ height: '100%' }} />}
+    containerElement={<div style={{ height: '100%' }} />}
+    mapElement={<div style={{ height: '100vh' }} />}
+    center={center}
+  />
+);
+
+export default withRouter(MapContainer);

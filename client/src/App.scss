@@ -93,3 +93,15 @@ a.nav-link.active:hover {
 img.header-logo {
   margin-bottom: 5px;
 }
+
+#resources_page {
+  #side_panel_container {
+    padding: 1.5rem 2rem 2rem 2rem;
+    overflow: auto;
+    max-height: 100vh;
+  }
+  
+  #map_container {
+    padding: 0;
+  }
+}
