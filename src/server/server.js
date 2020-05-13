@@ -5,7 +5,7 @@ import { readFileSync } from 'fs';
 
 const app = express();
 const DIST_DIR = __dirname;
-const HTML_FILE = path.join(DIST_DIR, 'index.html');
+const HTML_FILE = path.join(DIST_DIR, '../client/dist/index.html');
 
 // airtable
 const RESOURCES_TABLE = 'Community Resources';
@@ -35,7 +35,7 @@ function readKeys() {
   return JSON.parse(readFileSync('keys.json'));
 }
 
-app.use(express.static(DIST_DIR));
+app.use(express.static(path.join(DIST_DIR, '../client/dist')));
 
 // Gets the resources currently available
 app.get('/data/resources', (req, res) => {

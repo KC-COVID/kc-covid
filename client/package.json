@@ -15,7 +15,7 @@
     "clean:build": "if [ -d './dist' ]; then rimraf ./dist; fi && mkdir dist",
     "clean:install": "npm run clean && npm install",
     "postinstall": "npm run build",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development --config webpack.client.config",
     "test": "npm run test:lint && npm run test:jest",
     "lint:scss": "stylelint src/**/*.scss",
     "test:lint": "eslint --ext .js,.jsx, . && npm run lint:scss",
@@ -93,6 +93,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "main": "/dist/index.html",
+  "proxy": "http://localhost:8080",
   "directories": {
     "lib": "lib",
     "test": "tests"
