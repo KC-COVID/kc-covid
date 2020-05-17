@@ -20,14 +20,21 @@ const MapComponent = (withScriptjs(withGoogleMap(({ center }) => {
                 setRequests(data.requests);
             }
         });
-    }, [donations, requests]);
+    }, []);
+
+    const formatLatLong = ({ lat, lng }) => {
+        return {
+            lat: Number(lat),
+            lng: Number(lng)
+        }
+    }
 
     return (
         <GoogleMap
             defaultZoom={zoom}
             center={center}>
             {donations.map(donation => {
-                const position = {lat: donation.lat, lng: donation.lng};
+                const position = formatLatLong(donation);
                 return <Marker
                             key={donation.timestamp}
                             icon={DonationMarkerIcon}
@@ -35,7 +42,7 @@ const MapComponent = (withScriptjs(withGoogleMap(({ center }) => {
                         </Marker>
             })}
             {requests.map(request => {
-                const position = {lat: request.lat, lng: request.lng};
+                const position = formatLatLong(request);
                 return <Marker
                             key={request.timestamp}
                             icon={RequestMarkerIcon}
