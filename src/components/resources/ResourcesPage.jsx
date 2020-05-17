@@ -13,6 +13,8 @@ const Resources = () => {
             configGeoDataProps(geo_data).then(geo_data_props => {
                 const lat_lng = {lat: geo_data_props.latitude, lng: geo_data_props.longitude};
 
+                console.log(lat_lng);
+
                 setMapCoordinates(lat_lng);
                 setZipCode(geo_data_props.zipcode);
                 setGeoDataCookies(geo_data_props);

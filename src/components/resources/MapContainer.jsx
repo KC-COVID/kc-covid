@@ -4,9 +4,9 @@ import { GoogleMapsAPIKey } from '../../private/GoogleMaps';
 import { withRouter } from 'react-router-dom';
 import { resource_service } from '../../services/resources_service';
 
-// marker absolute paths
-const DonationMarkerIcon = '/images/markers/blue-marker.svg';
-const RequestMarkerIcon = '/images/markers/purple-marker.svg';
+// marker images
+import DonationMarkerIcon from '../../assets/markers/blue_marker.svg';
+import RequestMarkerIcon from '../../assets/markers/purple_marker.svg';
 
 const MapComponent = (withScriptjs(withGoogleMap(({ center }) => {
     const zoom = 12;
@@ -20,7 +20,7 @@ const MapComponent = (withScriptjs(withGoogleMap(({ center }) => {
                 setRequests(data.requests);
             }
         });
-    }, []);
+    }, [donations.length, requests.length]);
 
     const formatLatLong = ({ lat, lng }) => {
         return {
