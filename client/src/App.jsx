@@ -8,7 +8,7 @@ import Header from './components/Header';
 import HomePage from './components/HomePage';
 import RequestAidForm from './components/RequestAidForm';
 import VolunteerForm from './components/VolunteerForm';
-import Resources from './components/resources/ResourcesPage';
+import ResourcesPage from './components/resources/ResourcesPage';
 
 import './App.scss';
 
@@ -23,7 +23,7 @@ function App() {
           <Container fluid>
             <Switch>
               <Route path="/resources">
-                <Resources/>
+                <ResourcesPage/>
               </Route>
               <Route path="/aid">
                 <RequestAidForm />

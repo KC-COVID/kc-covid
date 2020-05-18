@@ -36,7 +36,6 @@
     ]
   },
   "dependencies": {
-<<<<<<< HEAD
     "@material-ui/core": "^4.9.7",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
@@ -47,13 +46,11 @@
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
-    "react-social-icons": "^4.1.0"
-=======
+    "react-social-icons": "^4.1.0",
     "airtable": "^0.8.1",
     "express": "^4.17.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.0.4"
->>>>>>> c92764b5f443ff5566a163586815060008537b6c
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
