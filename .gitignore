@@ -17,6 +17,7 @@
 /lib
 /target
 .idea
+*/package-lock.json
 
 # misc
 .DS_Store
