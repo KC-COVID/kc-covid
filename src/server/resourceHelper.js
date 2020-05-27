@@ -4,6 +4,8 @@ import readKeys from './readKeys';
 const geocodeOptions = { provider: 'google', apiKey: readKeys().googleApiKey };
 const geocoder = NodeGeocoder(geocodeOptions);
 
+const emailRegex = /^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$/;
+
 export const RESOURCES_TABLE = 'Community Resources';
 export const resourcesTableFilter = '{ReviewStatus} = "Approved"';
 export const resourceFieldsToGet = [
@@ -48,4 +50,41 @@ export async function buildResouceResponse(resource) {
     console.log(`Error trying to build resource with UID ${resource ? resource.UID : 'NULL'}. \n Error message: ${error.message} \n Throwing out.`);
     return null;
   }
+}
+
+/**
+ * Parses the request to add a new resource and builds it into something useable by the Airtable API.
+ * @param requestBody The request body to parse (Required).
+ * @return {Object} The parsed body to be used by Airtable or null if a required validation failed.
+ */
+export function parseResourceRequest(requestBody) {
+  const fields = {};
+  if (!requestBody.name) {
+    console.log('Attempted to add a resource with no name');
+    return null;
+  }
+  fields.name = requestBody.name;
+  fields.reviewStatus = 'Pending';
+  fields.website = requestBody.website;
+  fields.description = requestBody.description;
+  fields.restrictions = requestBody.restrictions;
+  fields.addressLine1 = requestBody.addressLine1; // TODO validate
+  fields.addressLine2 = requestBody.addressLine2; // TODO validate
+  fields.city = requestBody.city; // TODO validate
+  fields.state = requestBody.state; // TODO validate
+  fields.zip = requestBody.zip; // TODO validate
+
+  if (emailRegex.test(requestBody.emailAddress)) {
+    fields.emailAddress = requestBody.emailAddress;
+  }
+  fields.phoneNumber = requestBody.phoneNumber;
+
+  if (!fields.phoneNumber && !fields.emailAddress) {
+    console.log(`Request being added with name: ${fields.name} has no contact information.`);
+    return null;
+  }
+  // TODO types?
+  // TODO hours
+
+  return [JSON.stringify({ fields })];
 }

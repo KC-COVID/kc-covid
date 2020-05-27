@@ -3,13 +3,21 @@ import express from 'express';
 import Airtable from 'airtable';
 
 import readKeys from './readKeys';
-import { buildResouceResponse, RESOURCES_TABLE, resourceFieldsToGet, resourcesTableFilter } from './resourceHelper';
+import {
+  buildResouceResponse,
+  parseResourceRequest,
+  resourceFieldsToGet,
+  resourcesTableFilter,
+  RESOURCES_TABLE,
+} from './resourceHelper';
 
 const app = express();
 const DIST_DIR = __dirname;
 const HTML_FILE = path.join(DIST_DIR, '../client/dist/index.html');
 
 app.use(express.static(path.join(DIST_DIR, '../client/dist')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Gets the resources currently available
 app.get('/data/resources', (req, res) => {
@@ -27,6 +35,23 @@ app.get('/data/resources', (req, res) => {
         res.send({ resources: parsedResponses });
       });
     })
+    .catch((error) => {
+      console.log(error);
+      res.status(422).end();
+    });
+});
+
+app.post('/data/resources', (req, res) => {
+  const keys = readKeys();
+  const base = new Airtable().base(keys.resourcesBaseId);
+
+  const parsedResource = parseResourceRequest(req.body);
+  if (!parsedResource) {
+    res.status(422).end();
+  }
+
+  base(RESOURCES_TABLE).create(parsedResource)
+    .then(() => res.status(200).end())
     .catch((error) => {
       console.log(error);
       res.status(422).end();
