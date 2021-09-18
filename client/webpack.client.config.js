@@ -22,7 +22,13 @@ module.exports = {
       use: 'file-loader',
     }],
   },
-  resolve: { extensions: ['.js', '.jsx', '.json'] },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      '@': path.resolve('src/*'),
+      '@common': path.resolve('src/common'),
+    },
+  },
   devtool: 'eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, './dist'),

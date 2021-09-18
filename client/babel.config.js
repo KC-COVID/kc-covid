@@ -7,15 +7,13 @@ module.exports = (api) => {
     '@babel/preset-env',
     '@babel/preset-react',
   ];
+  // Can add below ['babel-plugin-webpack-alias', { config: path.resolve(__dirname, '../relativePath.config.js') }],
   const plugins = [
-    '@babel/transform-runtime',
     '@babel/plugin-transform-object-assign',
     '@babel/plugin-transform-modules-commonjs',
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-transform-react-jsx-source',
-    '@babel/plugin-transform-regenerator',
-    ['babel-plugin-webpack-alias', { config: path.resolve(__dirname, '../relativePath.config.js') }],
   ];
   return {
     presets,

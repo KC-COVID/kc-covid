@@ -6,12 +6,13 @@
     "type": "git",
     "url": "git+https://github.com/Kansas-City-Mutual-Aid/kc-covid.git"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "build": "npm run clean:build && cp src/index.html dist/index.html && NODE_ENV=production webpack --config webpack.client.config.js -p",
     "build:dev": "npm run clean:build && cp src/index.html dist/index.html && NODE_ENV=development webpack --config webpack.client.config.js -d",
-    "build-win": "powershell -Command \"Copy-Item 'src/index.html' 'dist/index.html'\" && webpack --config webpack.client.config.js -p",
-    "build-win:dev": "powershell -Command \"Copy-Item 'src/index.html' 'dist/index.html'\" && webpack --config webpack.client.config.js -d",
-    "clean": "rimraf ./node_modules",
+    "clean": "npm run clean:build && rimraf ./node_modules",
     "clean:build": "if [ -d './dist' ]; then rimraf ./dist; fi && mkdir dist",
     "clean:install": "npm run clean && npm install",
     "postinstall": "npm run build",
@@ -20,18 +21,6 @@
     "lint:scss": "stylelint src/**/*.scss",
     "test:lint": "eslint --ext .js,.jsx, . && npm run lint:scss",
     "test:jest": "jest --config jestconfig.json"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
@@ -93,11 +82,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.10.3"
-  },
-  "main": "/dist/index.html",
-  "proxy": "http://localhost:8080",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
   }
 }
